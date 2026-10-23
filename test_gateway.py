@@ -6,7 +6,8 @@ from fastapi.testclient import TestClient
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(BASE_DIR, "api-gateway"))
 
-import main as gateway_module
+# pyrefly: ignore[missing-import]
+import main as gateway_module  # type: ignore
 
 client = TestClient(gateway_module.app)
 

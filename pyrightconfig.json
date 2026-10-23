@@ -1,0 +1,8 @@
+{
+  "extraPaths": [
+    "./auth-service",
+    "./student-service",
+    "./course-service",
+    "./api-gateway"
+  ]
+}

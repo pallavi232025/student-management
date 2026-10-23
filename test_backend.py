@@ -12,8 +12,8 @@ def test_auth():
         if mod.startswith("app"):
             del sys.modules[mod]
 
-    from app.main import app as auth_app
-    from app.database import init_db
+    from app.main import app as auth_app  # type: ignore
+    from app.database import init_db  # type: ignore
     init_db()
 
     client = TestClient(auth_app)
@@ -65,8 +65,8 @@ def test_student(token):
         if mod.startswith("app"):
             del sys.modules[mod]
     
-    from app.main import app as student_app
-    from app.database import init_db
+    from app.main import app as student_app  # type: ignore
+    from app.database import init_db  # type: ignore
     init_db()
 
     client = TestClient(student_app)
@@ -126,8 +126,8 @@ def test_course(token, student_id):
         if mod.startswith("app"):
             del sys.modules[mod]
 
-    from app.main import app as course_app
-    from app.database import init_db
+    from app.main import app as course_app  # type: ignore
+    from app.database import init_db  # type: ignore
     init_db()
 
     client = TestClient(course_app)
